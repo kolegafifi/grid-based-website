@@ -11,15 +11,13 @@ const handleCurrentYear = () => {
 	footerYear.innerHTML = year
 }
 const hideNav = () => {
-	burger.classList.remove('is-active')
-	navMobile.classList.remove('nav-mobile--active')
+	burger.classList.toggle('is-active')
+	navMobile.classList.toggle('nav-mobile--active')
 }
-
 function handleNav() {
 	burger.classList.toggle('is-active')
 	navMobile.classList.add('nav-mobile--active')
 }
-
 handleCurrentYear()
 burger.addEventListener('click', handleNav)
 navLinkInvest.addEventListener('click', hideNav)
